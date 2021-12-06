@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>9</LangVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Linq.Expression.Optimizer" Version="1.0.13" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+  	<PackageReference Include="PropertyChanged.Fody" Version="3.4.0">
+	    <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  	<PackageReference Include="Xamarin.CommunityToolkit" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="IOCFoundation\" />
+    <Folder Include="Navigation\Interfaces\" />
+    <Folder Include="Navigation\Implementations\" />
+    <Folder Include="Navigation\NavigationContainers\" />
+    <Folder Include="Helpers\HelperServices\" />
+    <Folder Include="Helpers\HelperModels\" />
+    <Folder Include="PageFoundation\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Xamarin.CommunityToolkit" />
+  </ItemGroup>
+</Project>
