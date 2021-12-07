@@ -26,12 +26,8 @@ steps:
     outputDirectory: '$(outputDirectory)'
     configuration: '$(buildConfiguration)'
  
-
-- task: DownloadPackage@1
+- task: NuGetCommand@2
   inputs:
-    packageType: 'nuget'
-    feed: '370bcbc3-45bb-40b8-8f2d-74f3d325a597/cd1cb68a-58d8-4ebe-8d18-9c549403cefd'
-    view: '55c3fd3a-fe6f-45be-b87a-840d2fda8fe6'
-    definition: 'pk1'
-    version: 'latest'
-    downloadPath: '$(System.ArtifactsDirectory)'
+    command: pack
+    packagesToPack: '**/*.csproj'
+    packDestination: '$(Build.ArtifactStagingDirectory)'
