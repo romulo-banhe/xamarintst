@@ -25,11 +25,3 @@ steps:
     projectFile: '**/*droid*.csproj'
     outputDirectory: '$(outputDirectory)'
     configuration: '$(buildConfiguration)'
-- task: DownloadPackage@1
-  inputs:
-    packageType: 'nuget'
-    feed: '370bcbc3-45bb-40b8-8f2d-74f3d325a597/cd1cb68a-58d8-4ebe-8d18-9c549403cefd'
-    view: '2e7d8174-2c48-4144-9f7b-b4de4196e888'
-    definition: 'cd1cb68a-58d8-4ebe-8d18-9c549403cefd'
-    version: '3.0.0-beta'
-    downloadPath: '$(System.ArtifactsDirectory)'
