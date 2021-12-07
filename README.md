@@ -2,7 +2,7 @@
 
 Get Up and running with your _Xamarin Forms_ project in no time, use this template to get an new xamarin forms project with a MVVM Folder structure, The most used nuget packeges and services with the latest .netstanderd 2.1 and C# 8 with the push of a single button.
 
-## How to use it?
+## How to use it
 
 Just Click _Use This Template_ in the Project's Github Repo.
 
