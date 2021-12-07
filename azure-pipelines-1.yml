@@ -18,11 +18,6 @@ steps:
 
 - task: NuGetCommand@2
   inputs:
-- task: DownloadPipelineArtifact@2
-  inputs:
-    buildType: 'current'
-    artifactName: 'arti01'
-    targetPath: '$(Pipeline.Workspace)'
     restoreSolution: '**/*.sln'
 
 - task: XamarinAndroid@1
@@ -30,5 +25,10 @@ steps:
     projectFile: '**/*droid*.csproj'
     outputDirectory: '$(outputDirectory)'
     configuration: '$(buildConfiguration)'
-
-
+ 
+- task: DownloadPackage@1
+  inputs:
+    packageType: 'nuget'
+    feed: '370bcbc3-45bb-40b8-8f2d-74f3d325a597/cd1cb68a-58d8-4ebe-8d18-9c549403cefd'
+    definition: 
+    downloadPath: '$(System.ArtifactsDirectory)'
