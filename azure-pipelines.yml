@@ -32,11 +32,4 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
-- task: UniversalPackages@0
-  inputs:
-    command: 'publish'
-    publishDirectory: '$(Build.ArtifactStagingDirectory)'
-    feedsToUsePublish: 'internal'
-    vstsFeedPublish: '370bcbc3-45bb-40b8-8f2d-74f3d325a597/cd1cb68a-58d8-4ebe-8d18-9c549403cefd'
-    vstsFeedPackagePublish: 'pk01'
-    versionOption: 'patch'
+- task: PublishBuildArtifacts@1
